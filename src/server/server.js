@@ -1,13 +1,12 @@
 import net from "net";
 
 /**
- * Server class is a container for managing a server socket for 
- * providing random integer (1-100) for serving on process.env.PORT port 
+ * Server class is a container for managing a server socket for
+ * providing random integer (1-100) for serving on process.env.PORT port
  */
 export default class Server {
-  server = null;
-
   constructor() {
+    this.server = null;
     this.createServer();
   }
 
@@ -32,7 +31,7 @@ export default class Server {
 
       // When client closes the connection
       socket.on("end", data => {
-        console.log("Server > Socket ended from client!");
+        console.log("Server > Socket ended from client! "+ data);
       });
 
       // When socket closes
@@ -58,20 +57,16 @@ export default class Server {
 
         // Checks the received data from client to select the response
         switch (request) {
-
           // Client requests for random number
           case "getNewRandomNumberFromServer":
-
             // Server creates an interval for generating new random number and writes the result to client
-            let intervalId = setInterval(() => {
-
+            var intervalId = setInterval(() => {
               // If the socket is writable then we write a new random number to client
               // maybe the client has closed the connection, then the socket is not writable
               if (socket.writable) {
                 let newRandomNumber = Math.ceil(Math.random() * 100);
                 socket.write(newRandomNumber.toString());
               } else {
-                
                 // We clear the interval when the socket is not writable
                 clearInterval(intervalId);
               }
@@ -108,7 +103,9 @@ export default class Server {
       if (typeof callback === "function") {
         try {
           callback();
-        } catch (e) {}
+        } catch (e) {
+          console.log('Error occured on running callback function : ', e)
+        }
       }
     });
   }

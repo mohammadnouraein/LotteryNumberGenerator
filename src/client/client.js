@@ -5,9 +5,12 @@ import net from "net";
  * fetching random integer (1-100) from server
  */
 export default class Client {
-  client = null;
-  numbersList = [];
-  constructor() {}
+
+  
+  constructor() {
+    this.client=null;
+    this.numbersList = [];
+  }
   /**
    * This method creates new connection and
    * retrieves random number from server socket and
@@ -15,8 +18,9 @@ export default class Client {
    * when the result array completed then it resolved
    */
   getNewRandomNumberFromServer() {
+    
     this.numbersList = [];
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       this.client = net.createConnection({ port: process.env.PORT }, () => {
         console.log("\nClient > connected to server.");
         this.client.write("getNewRandomNumberFromServer");

@@ -4,6 +4,7 @@
   "description": "Test task node server and client for lottary",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint 'src/**/*.js'",
     "start": "npm run build && npm run server",
     "build": "babel -d dist src",
     "server": "node ./dist/server/index.js",
@@ -20,6 +21,7 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/preset-env": "^7.4.4"
+    "@babel/preset-env": "^7.4.4",
+    "eslint": "^5.16.0"
   }
 }
