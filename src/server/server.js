@@ -1,5 +1,8 @@
 import net from "net";
+import dotenv from "dotenv";
 
+//Initialize .env and maps the .env file into process.env
+dotenv.config();
 /**
  * Server class is a container for managing a server socket for
  * providing random integer (1-100) for serving on process.env.PORT port

@@ -1,4 +1,8 @@
 import net from "net";
+import dotenv from "dotenv";
+
+//Initialize .env and maps the .env file into process.env
+dotenv.config();
 
 /**
  * Client class is a container for managing a client connections for 

@@ -1,0 +1,5 @@
+{
+    "exec": "npm run build && npm run http-server",
+    "watch": ["src/http-server/*.js"],
+    "ext": "js, html, css, json"
+  }

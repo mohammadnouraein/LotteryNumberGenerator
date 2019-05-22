@@ -10,18 +10,23 @@
     "server": "node ./dist/server/index.js",
     "client": "node ./dist/client/index.js",
     "http-server": "node ./dist/http-server/index.js",
-    "http-client": "node ./dist/http-client/index.js"
+    "http-client": "node ./dist/http-client/index.js",
+    "watch": "nodemon"
   },
   "author": "Mohammad Nouraein",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^7.0.0"
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^7.0.0",
+    "express": "^4.17.0",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "nodemon": "^1.19.0"
   }
 }
