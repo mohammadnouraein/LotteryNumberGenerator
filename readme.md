@@ -8,9 +8,10 @@ This is a project with 4 part.
 # Fast help
 
 1. run `npm i`
-2. run `npm run server`
-3. run `npm run http-server`
-4. open [http://localhost:3000]() on browser (chrome or firefox prefered)
+2. run `npm run build`
+3. run `npm run server`
+4. open another terminal(mac) or command window(windows) and run `npm run http-server`
+5. open [http://localhost:3000]() on browser (chrome or firefox prefered)
 
 
 # Installation construction in detail
