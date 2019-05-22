@@ -4,8 +4,12 @@
   "description": "Test task node server and client for lottary",
   "main": "index.js",
   "scripts": {
-    "build": "babel  -d  dist src",
-    "start": "npm run build && node ./dist/index.js"
+    "start": "npm run build && npm run server",
+    "build": "babel -d dist src",
+    "server": "node ./dist/server/index.js",
+    "client": "node ./dist/client/index.js",
+    "http-server": "node ./dist/http-server/index.js",
+    "http-client": "node ./dist/http-client/index.js"
   },
   "author": "Mohammad Nouraein",
   "license": "ISC",

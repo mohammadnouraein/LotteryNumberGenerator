@@ -1,15 +1,11 @@
-import net from "net";
+import dotenv from "dotenv";
 
-export default class Client {
-  client = null;
-  constructor() {}
+//Initialize .env and maps the .env file into process.env
+dotenv.config();
 
-  createConnection() {
-    this.client = net.createConnection({ port: process.env.PORT }, () => {
-      console.log("connected to server");
-      setInterval(() => {
-        this.client.write("getNewRandomNumber");
-      }, 1000);
-    });
-  }
-}
+import Client from "./client";
+
+let client = new Client();
+client.getNewRandomNumberFromServer().then(res => {
+  console.log("Client > All numbers retrieved from server : ", res);
+});
