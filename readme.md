@@ -7,41 +7,66 @@ This is a project with 4 part.
 
 # Fast help
 
-1. run `npm i`
-2. run `npm run build`
-3. run `npm run server`
-4. open another terminal(mac) or command window(windows) and run `npm run http-server`
-5. open [http://localhost:3000]() on browser (chrome or firefox prefered)
+```sh
+$ npm i
+```
+
+```sh
+$ npm run build
+```
+```sh
+$ npm run server
+```
+Open another terminal (mac) or command window (windows) and run 
+```sh
+$ npm run http-server
+```
+
+Open [http://localhost:3000]() on browser (chrome or firefox prefered)
 
 
 # Installation construction in detail
 
 1. install dependencies\
 For installation just you need to install dependency packages.
-    `npm i`  
+```sh
+$ npm i
+``` 
 
 2. build the application\
-Before everything you need to build the project.\
-    `npm run build`
+Before everything you need to build the project.
+```sh
+$ npm run build
+```
 
 
 3. run server socket component\
-Start the server socket by running this command.\
-    `npm run server`
+Start the server socket by running this command.
+```sh
+$ npm run server
+```
 
 
 4. run client socket component\
-This part is not necessary bu you can run client socket for testing server, without http server.\ 
-    `npm run client`
+This part is not necessary bu you can run client socket for testing server, without http server.
+```sh
+$ npm run client
+```
 
 
 5. run http server\
 For viewing the result just run the below command and open [http://localhost:3000]()
-    `npm run http-server`\
-    or you can run the below command to watch the changes
-    `npm run watch`
+```sh
+$ npm run http-server
+```
+or you can run the below command to watch the changes
+```sh
+$ npm run watch
+```
 
 6. run linter.
-    `npm run lint`
+```sh
+$ npm run lint
+```
 
 
