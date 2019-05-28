@@ -11,7 +11,8 @@
     "client": "node ./dist/client/index.js",
     "http-server": "node ./dist/http-server/index.js",
     "http-client": "node ./dist/http-client/index.js",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "test": "npm run build && mocha ./dist/test.js"
   },
   "author": "Mohammad Nouraein",
   "license": "ISC",
@@ -27,6 +28,7 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
     "nodemon": "^1.19.0"
   }
 }
